@@ -36,7 +36,7 @@ def push_changes(repo, branch='main', username=None, token=None, github_url=None
     
     # Push the branch and set upstream if it's the first push
     if branch not in repo.heads:
-        repo.git.push("--set-upstream", "origin main", branch)
+        repo.git.push("--set-upstream", "origin", branch)
     else:
         origin.push(refspec=f"{branch}:{branch}")
     print(f"Changes pushed to the '{branch}' branch of GitHub.")
