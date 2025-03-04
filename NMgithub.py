@@ -22,6 +22,17 @@ def init_repo(repo_dir):
         repo = Repo.init(repo_dir)
     return repo
 
+# Function to create an initial commit
+def create_initial_commit(repo):
+    # If no commits exist in the repository, we need to create one
+    if not repo.head.commit:
+        # Create a new empty file to commit if no files exist
+        with open(os.path.join(repo.working_tree_dir, 'README.md'), 'w') as f:
+            f.write("# Initial Commit\n")
+        repo.index.add(['README.md'])
+        repo.index.commit("Initial commit")
+        print("Initial commit created.")
+
 # Function to commit changes to the repository
 def commit_changes(repo, commit_message):
     repo.git.add(A=True)  # Adds all modified files
@@ -63,7 +74,7 @@ def push_modified_files(repo, branch='main', username=None, token=None, github_u
 # Main function to execute the tasks
 def main():
     repo_dir = "/home/netman/GITREPO"  # Local repository path
-    github_url = "https://github.com/AravindhGoutham/Aravindh.git"  # Ask for the GitHub repo URL
+    github_url = "https://github.com/AravindhGoutham/Aravindh.git"  # GitHub repo URL
     username = "AravindhGoutham"  # Your GitHub username
     token = getpass.getpass("Enter your GitHub personal access token (hidden): ")  # Ask for token securely
     branch = "main"  # Specify the branch, default is 'main'
@@ -75,6 +86,9 @@ def main():
     if not repo.remotes:
         print(f"Adding remote GitHub repository: {github_url}")
         repo.create_remote('origin', github_url)
+
+    # Create the initial commit if no commits exist
+    create_initial_commit(repo)
 
     # Commit all files and push them
     commit_changes(repo, "Initial commit or update")
