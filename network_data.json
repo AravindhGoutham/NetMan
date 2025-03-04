@@ -1,0 +1,118 @@
+{
+    "network": {
+        "R1": {
+            "addresses": {
+                "Interface-1": {
+                    "v4": "7.0.0.1"
+                },
+                "Interface-16": {
+                    "v6": [
+                        "1234:4321:0ab8:0000:0000:0000:0000:0001"
+                    ]
+                }
+            }
+        },
+        "R2": {
+            "addresses": {
+                "Interface-4": {
+                    "v4": "7.0.0.4"
+                },
+                "Interface-6": {
+                    "v4": "40.0.0.6"
+                },
+                "Interface-16": {
+                    "v6": [
+                        "1234:4321:0ab8:0000:4ccc:d8b0:f072:745b",
+                        "2001:0db8:0001:0000:c802:4cff:fe31:0000"
+                    ]
+                }
+            }
+        },
+        "R3": {
+            "addresses": {
+                "Interface-5": {
+                    "v4": "7.0.0.5"
+                },
+                "Interface-4": {
+                    "v4": "40.0.0.4"
+                },
+                "Interface-16": {
+                    "v6": [
+                        "1234:4321:0ab8:0000:00f0:ac77:a739:4f30",
+                        "2001:0db8:0001:0000:c803:4cff:fe50:0000"
+                    ]
+                }
+            }
+        },
+        "R4": {
+            "addresses": {
+                "Interface-1": {
+                    "v4": "25.0.0.1"
+                },
+                "Interface-5": {
+                    "v4": "40.0.0.5"
+                },
+                "Interface-16": {
+                    "v6": [
+                        "2001:0002:0003:0004:0000:0000:0000:0001",
+                        "2001:0db8:0001:0000:0000:0000:0000:0001"
+                    ]
+                }
+            }
+        },
+        "R5": {
+            "addresses": {
+                "Interface-1": {
+                    "v4": "40.0.0.1"
+                },
+                "Interface-16": {
+                    "v6": [
+                        "2001:0db8:0001:0000:c805:4cff:fe8c:0000"
+                    ]
+                }
+            }
+        }
+    },
+    "interface_status": {
+        "R1": {
+            "Interface-1": "Down",
+            "Interface-2": "Up",
+            "Interface-3": "Down",
+            "Interface-4": "Down",
+            "Interface-5": "Up",
+            "Interface-6": "Up"
+        },
+        "R2": {
+            "Interface-1": "Up",
+            "Interface-2": "Up",
+            "Interface-3": "Down",
+            "Interface-4": "Down",
+            "Interface-5": "Up",
+            "Interface-6": "Up"
+        },
+        "R3": {
+            "Interface-1": "Up",
+            "Interface-2": "Up",
+            "Interface-3": "Down",
+            "Interface-4": "Down",
+            "Interface-5": "Up",
+            "Interface-6": "Up"
+        },
+        "R4": {
+            "Interface-1": "Up",
+            "Interface-2": "Up",
+            "Interface-3": "Down",
+            "Interface-4": "Down",
+            "Interface-5": "Up",
+            "Interface-6": "Up"
+        },
+        "R5": {
+            "Interface-1": "Up",
+            "Interface-2": "Down",
+            "Interface-3": "Down",
+            "Interface-4": "Down",
+            "Interface-5": "Up",
+            "Interface-6": "Up"
+        }
+    }
+}
