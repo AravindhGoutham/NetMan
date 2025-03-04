@@ -45,11 +45,13 @@ def push_changes(repo, branch='main', username=None, token=None, github_url=None
     # Using HTTPS with the username and personal access token for authentication
     origin.set_url(f"https://{username}:{token}@{github_url.replace('https://', '')}")
     
-    # Push the branch and set upstream if it's the first push
+    # Check if the branch exists locally, if not, create it
     if branch not in repo.heads:
-        repo.git.push("--set-upstream", "origin", branch)
-    else:
-        origin.push(refspec=f"{branch}:{branch}")
+        print(f"Branch '{branch}' does not exist locally. Creating it now.")
+        repo.git.checkout("-b", branch)
+    
+    # Push the branch and set upstream if it's the first push
+    repo.git.push("--set-upstream", "origin", branch)
     print(f"Changes pushed to the '{branch}' branch of GitHub.")
 
 # Function to compare and push only modified files
@@ -99,4 +101,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
