@@ -76,7 +76,7 @@ def fetch_router_data():
 
         ipv4_addresses = snmp_walk(session, oid_ipv4)  #IPv4 addresses
         ipv6_addresses = snmp_walk(session, oid_ipv6)  #IPv6 addresses
-        if_status = snmp_walk(session, oid_ifstatus)  #interface status
+        if_status = snmp_walk(session, oid_ifstatus)  #interface statuses
         if_names = snmp_walk(session, oid_ifname)  #interface names
         network_data[router] = {"addresses": {}}  # Initialize network data for this router
         interface_status[router] = {}  # Initialize interface status for this router
@@ -156,4 +156,3 @@ def monitor_cpu_util():
 network_data, interface_status = fetch_router_data()  # Fetch the network data and interface statuses
 save_data_to_json(network_data, interface_status)  # Save the collected data to a JSON file
 monitor_cpu_util()  # Monitor and plot CPU utilization
-

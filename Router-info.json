@@ -2,7 +2,7 @@
     "network": {
         "R1": {
             "addresses": {
-                "Interface-1": {
+                "Fa0/0": {
                     "v4": "7.0.0.1"
                 },
                 "Interface-16": {
@@ -14,10 +14,10 @@
         },
         "R2": {
             "addresses": {
-                "Interface-4": {
+                "Gi2/0": {
                     "v4": "7.0.0.4"
                 },
-                "Interface-6": {
+                "Nu0": {
                     "v4": "40.0.0.6"
                 },
                 "Interface-16": {
@@ -30,10 +30,10 @@
         },
         "R3": {
             "addresses": {
-                "Interface-5": {
+                "Vo0": {
                     "v4": "7.0.0.5"
                 },
-                "Interface-4": {
+                "Gi2/0": {
                     "v4": "40.0.0.4"
                 },
                 "Interface-16": {
@@ -46,10 +46,10 @@
         },
         "R4": {
             "addresses": {
-                "Interface-1": {
+                "Fa0/0": {
                     "v4": "25.0.0.1"
                 },
-                "Interface-5": {
+                "Vo0": {
                     "v4": "40.0.0.5"
                 },
                 "Interface-16": {
@@ -62,7 +62,7 @@
         },
         "R5": {
             "addresses": {
-                "Interface-1": {
+                "Fa0/0": {
                     "v4": "40.0.0.1"
                 },
                 "Interface-16": {
@@ -75,44 +75,44 @@
     },
     "interface_status": {
         "R1": {
-            "Interface-1": "Down",
-            "Interface-2": "Up",
-            "Interface-3": "Down",
-            "Interface-4": "Down",
-            "Interface-5": "Up",
-            "Interface-6": "Up"
+            "Fa0/0": "Down",
+            "Fa1/0": "Up",
+            "Fa1/1": "Down",
+            "Gi2/0": "Down",
+            "Vo0": "Up",
+            "Nu0": "Up"
         },
         "R2": {
-            "Interface-1": "Up",
-            "Interface-2": "Up",
-            "Interface-3": "Down",
-            "Interface-4": "Down",
-            "Interface-5": "Up",
-            "Interface-6": "Up"
+            "Fa0/0": "Up",
+            "Fa1/0": "Up",
+            "Fa1/1": "Down",
+            "Gi2/0": "Down",
+            "Vo0": "Up",
+            "Nu0": "Up"
         },
         "R3": {
-            "Interface-1": "Up",
-            "Interface-2": "Up",
-            "Interface-3": "Down",
-            "Interface-4": "Down",
-            "Interface-5": "Up",
-            "Interface-6": "Up"
+            "Fa0/0": "Up",
+            "Fa1/0": "Up",
+            "Fa1/1": "Down",
+            "Gi2/0": "Down",
+            "Vo0": "Up",
+            "Nu0": "Up"
         },
         "R4": {
-            "Interface-1": "Up",
-            "Interface-2": "Up",
-            "Interface-3": "Down",
-            "Interface-4": "Down",
-            "Interface-5": "Up",
-            "Interface-6": "Up"
+            "Fa0/0": "Up",
+            "Fa1/0": "Up",
+            "Fa1/1": "Down",
+            "Gi2/0": "Down",
+            "Vo0": "Up",
+            "Nu0": "Up"
         },
         "R5": {
-            "Interface-1": "Up",
-            "Interface-2": "Down",
-            "Interface-3": "Down",
-            "Interface-4": "Down",
-            "Interface-5": "Up",
-            "Interface-6": "Up"
+            "Fa0/0": "Up",
+            "Fa1/0": "Down",
+            "Fa1/1": "Down",
+            "Gi2/0": "Down",
+            "Vo0": "Up",
+            "Nu0": "Up"
         }
     }
 }
